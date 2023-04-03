@@ -44,7 +44,7 @@ const PaginaPrincipal = () => {
                 Personal information
                 </Button>
             </Link>
-            <Link href="/ProyectoCreados" marginLeft={4} >
+            <Link href="/ProyectosCreados" marginLeft={4} >
                 <Button variant="outlined" style={{     border: '1px solid #0afdd7',color: "white"}}>
                 Projects created
                 </Button>
