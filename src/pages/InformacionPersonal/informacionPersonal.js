@@ -32,8 +32,28 @@ const InformacionPersonal = () => {
             <img fontSize={'50px'} src={Profile} style={{background:'#ffffff', width:'350px', 
         heigh:'150px', position:'fixed', marginLeft:'880px', marginTop:'110px' ,borderRadius:'30px'}}/>
             <Item>
-            <Button variant="outlined"  style={{border: '1px solid #0afdd7', fontFamily:'ui-monospace', marginLeft:'545px', marginTop:'3    0px', color: "#0afdd7"}}>Hi!</Button>
-            <Typography marginLeft={'545px'} fontSize={'25px'} color={'#ff0080'} variant="h3" gutterBottom><p>Developer</p></Typography>
+            <Link href="/ProyectosCreados" marginLeft={25} >
+                <Button variant="outlined" style={{     border: '1px solid #0afdd7',color: "white"}}>
+                Projects created
+                </Button>
+            </Link>
+            <Link href="/RedesSociales" marginLeft={4} >
+                <Button variant="outlined" style={{     border: '1px solid #0afdd7',color: "white"}}>
+                Social networks
+                </Button>
+            </Link>
+            <Link href="SolicitudesRecibidas" marginLeft={4}>
+                <Button variant="outlined" style={{     border: '1px solid #0afdd7',color: "white"}}>
+                Applications received
+                </Button>
+            </Link>
+            <Link href="/TecnologiasAprendidas" marginLeft={4}>
+                <Button variant="outlined" style={{border: '1px solid #0afdd7',color: "white"}}>
+                Technologies learned
+                </Button>
+            </Link>
+            <Typography marginLeft={'545px'} fontSize={'25px'} color={'#0afdd7'} variant="h3" gutterBottom><p>Hi</p></Typography>
+            <Typography marginLeft={'545px'} fontSize={'25px'} color={'#ff0080'} variant="h3" gutterBottom><p> I am a Developer</p></Typography>
             <Typography marginLeft={'545px'} fontSize={'25px'} color={'white '} variant="h3" gutterBottom><p>____________________________</p></Typography>
             <Typography marginLeft={'545px'} fontSize={'25px'} color={'#0afdd7'} variant="h3" gutterBottom><p>Andres Mejia</p></Typography>
                  <Box sx={{ flexGrow: 1 }}>

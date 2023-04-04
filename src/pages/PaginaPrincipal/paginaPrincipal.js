@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import React, { Component }  from 'react';
-import Programmer from '../assets/Programmer.jpg'
+import Programmer2 from '../assets/Programmer2.png'
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -26,9 +26,9 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const PaginaPrincipal = () => {
     return (
-    <Grid container spacing={2} height='500px' alignContent={'center'} marginTop='30px'  style={{ background: '#0d0d0d' }}>
+    <Grid container spacing={2} height='500px' alignContent={'center'} marginTop='30px'  style={{ background: 'black' }}>
         <Grid item xs={12}>
-        <img  src={Programmer} style={{background:'#ffffff', borderRadius:'30px', width:'200px', 
+        <img  src={Programmer2} style={{background:'#ffffff', borderRadius:'30px', width:'200px', 
         heigh:'100px', position:'fixed', marginLeft:'750px', marginTop:'60px', opacity: .4}}/>
             <item>
                 <Typography  variant="h3" color={"white"} mt={2} marginLeft={5} gutterBottom style={{ background: '#0d0d0d' }}>
@@ -36,9 +36,7 @@ const PaginaPrincipal = () => {
                 </Typography>
                 <Typography variant="h3" mt={2} marginLeft={5} color="#ff0080" marginBottom={10}> Full stack Developer - Enyoi <LaptopWindowsIcon fontSize="16px"/>     </Typography> 
                 
-            </item>
-            
-                 
+            </item>  
             <Link href="/InformacionPersonal" marginLeft={4}>
                 <Button variant="outlined" style={{     border: '1px solid #0afdd7',color: "white"}}>
                 Personal information

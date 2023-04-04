@@ -2,29 +2,52 @@ import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import CssIcon from '@mui/icons-material/Css';
-import JavascriptIcon from '@mui/icons-material/Javascript';
-import HtmlIcon from '@mui/icons-material/Html';
-import CodeIcon from '@mui/icons-material/Code';
 import KeyboardIcon from '@mui/icons-material/Keyboard';
 import Button from '@mui/material/Button';
 import { Link } from "@mui/material";
 import React, { Component }  from 'react';
+import Web1 from '../assets/Web1.png';
+import Web2 from '../assets/Web2.png';
+import Web3 from '../assets/Web3.png';
 
 const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#0d0d0d' : '#0d0d0d',
+  backgroundColor: theme.palette.mode === 'dark' ? 'black' : 'black',
   color: '#323637',
   ...theme.typography.body2,
   padding: theme.spacing(1),
   textAlign: 'center',
 }));
 
+
+
 const ProyectosCreados = () => {
     return (
         <Grid container spacing={2}>
             <Grid item xs={12}>
+            <img  src={Web1} style={{background:'#ffffff', borderRadius:'30px', width:'200px', 
+        heigh:'100px', position:'fixed', marginLeft:'50px', marginTop:'5px', opacity: .4}}/>
+        <img  src={Web2} style={{background:'#ffffff', borderRadius:'30px', width:'200px', 
+        heigh:'100px', position:'fixed', marginLeft:'950px', marginTop:'290px', opacity: .4}}/>
+        <img  src={Web3} style={{background:'#ffffff', borderRadius:'30px', width:'200px', 
+        heigh:'100px', position:'fixed', marginLeft:'515px', marginTop:'170px', opacity: .4}}/>
+        
             <Item>
-               <Typography fontSize={'35px'} color={'white'} variant="h5" gutterBottom>
+            <Link href="/InformacionPersonal" marginLeft={4}>
+                <Button variant="outlined" style={{     border: '1px solid #0afdd7',color: "white"}}>
+                Personal information
+                </Button>
+            </Link>
+            <Link href="/RedesSociales" marginLeft={4} >
+                <Button variant="outlined" style={{     border: '1px solid #0afdd7',color: "white"}}>
+                Social networks
+                </Button>
+            </Link>
+            <Link href="/TecnologiasAprendidas" marginLeft={4}>
+                <Button variant="outlined" style={{border: '1px solid #0afdd7',color: "white"}}>
+                Technologies learned
+                </Button>
+            </Link>
+               <Typography fontSize={'35px'} marginTop={'50px'} color={'white'} variant="h5" gutterBottom>
                  <p>Projects Created</p></Typography>
                  <Grid container spacing={2}>
                     <Grid item xs={6}>
@@ -70,6 +93,11 @@ const ProyectosCreados = () => {
                 <Button variant="outlined" style={{border: '1px solid #0afdd7',color: "#0afdd7"}}>
                 main page
                 </Button>
+                </Link>
+                <Link href="/Contactanos" marginLeft={4}>
+                <Button variant="outlined" style={{ border: '1px solid #0afdd7', background:'#0afdd7', color: "black"}}>
+                  Contact me!
+                 </Button>
                 </Link>
              </Item>
              </Grid>

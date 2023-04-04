@@ -10,7 +10,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TextField from '@mui/material/TextField';
-
+import Contact from '../assets/Contact.png'
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? 'black' : 'black',
@@ -27,15 +27,36 @@ const Contactanos = () => {
     return (
         <Grid  container spacing={2}>
             <Grid item xs={12}>
+            <img  src={Contact} style={{background:'#ffffff', borderRadius:'30px', width:'200px', 
+        heigh:'100px', position:'fixed', marginLeft:'430px', marginTop:'200px', opacity: .4}}/>
             <Item>
-            <Typography marginLeft={'350px'} fontSize={'20px'} color={'#0afdd7'} variant="h3" gutterBottom><p>Get in Touch</p></Typography>
-            <Typography marginLeft={'350px'} fontSize={'20px'} color={'#ff0080'} variant="h3" gutterBottom><p>Please fill out the quick form and we will be in touch soon</p></Typography>
+            <Link href="/InformacionPersonal" marginLeft={22}>
+                <Button variant="outlined" style={{     border: '1px solid #0afdd7',color: "white"}}>
+                Personal information
+                </Button>
+            </Link>
+            <Link href="/ProyectosCreados" marginLeft={4} >
+                <Button variant="outlined" style={{     border: '1px solid #0afdd7',color: "white"}}>
+                Projects created
+                </Button>
+            </Link>
+            <Link href="/RedesSociales" marginLeft={4} >
+                <Button variant="outlined" style={{     border: '1px solid #0afdd7',color: "white"}}>
+                Social networks
+                </Button>
+            </Link>
+            <Link href="/TecnologiasAprendidas" marginLeft={4}>
+                <Button variant="outlined" style={{border: '1px solid #0afdd7',color: "white"}}>
+                Technologies learned
+                </Button>
+            </Link>   
+            <Typography marginLeft={'175px'} fontSize={'20px'} color={'#ff0080'} variant="h3" gutterBottom><p>Please fill out the quick form and we will be in touch soon</p></Typography>
             
             
             <Grid  container spacing={2}>
             <Grid item xs={6}>
             <Box component="form"
-                sx={{ backgroundColor:'white', marginLeft:'350px' , width:'230px',
+                sx={{ backgroundColor:'white', marginLeft:'175px' , width:'230px',
                     '& > :not(style)': { m: 1, width: '25ch' },
                 }}
                 noValidate
