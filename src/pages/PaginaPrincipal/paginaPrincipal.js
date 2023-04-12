@@ -5,7 +5,7 @@ import LaptopWindowsIcon from '@mui/icons-material/LaptopWindows';
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
-import React, { Component }  from 'react';
+import React  from 'react';
 import Programmer2 from '../assets/Programmer2.png'
 
 
@@ -28,10 +28,15 @@ const PaginaPrincipal = () => {
     return (
     <Grid container spacing={2} height='500px' alignContent={'center'} marginTop='30px'  style={{ background: 'black' }}>
         <Grid item xs={12}>
+        <Link href="/Login" marginLeft={4}>
+                <Button variant="outlined" style={{     border: '1px solid #0afdd7',color: "white"}}>
+                Login
+                </Button>
+            </Link>
         <img  src={Programmer2} style={{background:'#ffffff', borderRadius:'30px', width:'200px', 
         heigh:'100px', position:'fixed', marginLeft:'750px', marginTop:'60px', opacity: .4}}/>
             <item>
-                <Typography  variant="h3" color={"white"} mt={2} marginLeft={5} gutterBottom style={{ background: '#0d0d0d' }}>
+                <Typography  variant="h3" color={"white"} mt={2} marginLeft={5} gutterBottom style={{ background: 'black' }}>
                     Andres Mejia  
                 </Typography>
                 <Typography variant="h3" mt={2} marginLeft={5} color="#ff0080" marginBottom={10}> Full stack Developer - Enyoi <LaptopWindowsIcon fontSize="16px"/>     </Typography> 
@@ -67,7 +72,7 @@ const PaginaPrincipal = () => {
                     <Grid item xs={12}/>
                     
                         <Item2 style={{ background: '#0d0d0d' }}>
-                            <Typography variant="h5" marginLeft={5} gutterBottom style={{ background: '#0d0d0d' }}>
+                            <Typography variant="h5" marginLeft={5} gutterBottom style={{ background: 'black' }}>
                                 <p> For more information do not hesitate to contact me </p>
                             </Typography>
                             <Link href="/Contactanos" marginLeft={4}>

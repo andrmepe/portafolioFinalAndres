@@ -30,7 +30,7 @@ const Contactanos = () => {
             <img  src={Contact} style={{background:'#ffffff', borderRadius:'30px', width:'200px', 
         heigh:'100px', position:'fixed', marginLeft:'430px', marginTop:'200px', opacity: .4}}/>
             <Item>
-            <Link href="/InformacionPersonal" marginLeft={22}>
+            <Link href="/InformacionPersonal" marginLeft={4}>
                 <Button variant="outlined" style={{     border: '1px solid #0afdd7',color: "white"}}>
                 Personal information
                 </Button>
@@ -50,6 +50,11 @@ const Contactanos = () => {
                 Technologies learned
                 </Button>
             </Link>   
+            <Link href="SolicitudesRecibidas" marginLeft={4}>
+                <Button variant="outlined" style={{     border: '1px solid #0afdd7',color: "white"}}>
+                Applications received
+                </Button>
+            </Link>
             <Typography marginLeft={'175px'} fontSize={'20px'} color={'#ff0080'} variant="h3" gutterBottom><p>Please fill out the quick form and we will be in touch soon</p></Typography>
             
             
@@ -84,8 +89,8 @@ const Contactanos = () => {
                     <Grid item xs={8}>  <Item>Phone: 0451049712</Item>     </Grid>
                     <Grid item xs={8}>  <Item>E-mail: anmepe.sud@gmail.com</Item>  </Grid>
                     <Grid item xs={8}>
-                    <Typography><Item> Redes sociales:<a href="https://www.facebook.com/" target={"_blank"}><FacebookIcon  fontSize='30px' /></a>
-                 <a href="https://www.linkedin.com/feed/" target={"_blank"}><LinkedInIcon fontSize='30px' /></a>
+                    <Typography><Item> Redes sociales:<a href="https://www.facebook.com/andres.m.perez.581" target={"_blank"}><FacebookIcon  fontSize='30px' /></a>
+                 <a href="https://www.linkedin.com/in/andres-mejia-374483240/" target={"_blank"}><LinkedInIcon fontSize='30px' /></a>
                  <a href="https://www.instagram.com/" target={"_blank"}><InstagramIcon fontSize='30px'   /></a></Item></Typography>
                     </Grid>
                 </Grid>

@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import KeyboardIcon from '@mui/icons-material/Keyboard';
 import Button from '@mui/material/Button';
 import { Link } from "@mui/material";
-import React, { Component }  from 'react';
+import React from 'react';
 import Web1 from '../assets/Web1.png';
 import Web2 from '../assets/Web2.png';
 import Web3 from '../assets/Web3.png';
@@ -47,6 +47,11 @@ const ProyectosCreados = () => {
                 Technologies learned
                 </Button>
             </Link>
+            <Link href="SolicitudesRecibidas" marginLeft={4}>
+                <Button variant="outlined" style={{     border: '1px solid #0afdd7',color: "white"}}>
+                Applications received
+                </Button>
+            </Link>
                <Typography fontSize={'35px'} marginTop={'50px'} color={'white'} variant="h5" gutterBottom>
                  <p>Projects Created</p></Typography>
                  <Grid container spacing={2}>
@@ -61,7 +66,7 @@ const ProyectosCreados = () => {
                  <Typography fontSize={'15px'} color={'#ff0080'} variant="h3" gutterBottom><a 
                  href='https://github.com/andrmepe/challenge-react-router-front' target='_blank' rel='noreferrer'>https://github.com/andrmepe/challenge-react-router-front</a></Typography>
                  <Typography fontSize={'15px'} color={'#ff0080'} variant="h3" gutterBottom><a 
-                 href='https://github.com/andrmepe/challenge-react-router-front' target='_blank' rel='noreferrer'>https://github.com/andrmepe/challenge-react-router-front</a></Typography>
+                 href='https://github.com/andrmepe/peliculas-back' target='_blank' rel='noreferrer'>https://github.com/andrmepe/peliculas-back</a></Typography>
                  
                  </Grid>
                  
@@ -69,15 +74,15 @@ const ProyectosCreados = () => {
                     <Grid item xs={6}>
                     
                  <Typography fontSize={'15px'} color={'#ff0080'} variant="h3" gutterBottom><a 
-                 href='https://github.com/andrmepe/challenge-react-router-front' target='_blank' rel='noreferrer'>https://github.com/andrmepe/challenge-react-router-front</a></Typography>
+                 href='https://github.com/andrmepe/fron-vehiculos' target='_blank' rel='noreferrer'>https://github.com/andrmepe/fron-vehiculos</a></Typography>
                  <Typography fontSize={'15px'} color={'#ff0080'} variant="h3" gutterBottom><a 
-                 href='https://github.com/andrmepe/challenge-react-router-front' target='_blank' rel='noreferrer'>https://github.com/andrmepe/challenge-react-router-front</a></Typography>
+                 href='https://github.com/andrmepe/backendVehiculos' target='_blank' rel='noreferrer'>https://github.com/andrmepe/backendVehiculos</a></Typography>
                  <Typography fontSize={'15px'} color={'#ff0080'} variant="h3" gutterBottom><a 
-                 href='https://github.com/andrmepe/challenge-react-router-front' target='_blank' rel='noreferrer'>https://github.com/andrmepe/challenge-react-router-front</a></Typography>
+                 href='https://github.com/andrmepe/Primer-commit-FronUser' target='_blank' rel='noreferrer'>https://github.com/andrmepe/Primer-commit-FronUser</a></Typography>
                  <Typography fontSize={'15px'} color={'#ff0080'} variant="h3" gutterBottom><a 
-                 href='https://github.com/andrmepe/challenge-react-router-front' target='_blank' rel='noreferrer'>https://github.com/andrmepe/challenge-react-router-front</a></Typography>
+                 href='https://github.com/andrmepe/portafolio2' target='_blank' rel='noreferrer'>https://github.com/andrmepe/portafolio2</a></Typography>
                  <Typography fontSize={'15px'} color={'#ff0080'} variant="h3" gutterBottom><a 
-                 href='https://github.com/andrmepe/challenge-react-router-front' target='_blank' rel='noreferrer'>https://github.com/andrmepe/challenge-react-router-front</a></Typography>
+                 href='https://github.com/andrmepe/portafolio' target='_blank' rel='noreferrer'>https://github.com/andrmepe/portafolio</a></Typography>
                      
                     </Grid>
                     </Grid>      

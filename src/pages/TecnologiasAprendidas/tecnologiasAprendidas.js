@@ -9,7 +9,7 @@ import CodeIcon from '@mui/icons-material/Code';
 import KeyboardIcon from '@mui/icons-material/Keyboard';
 import Button from '@mui/material/Button';
 import { Link } from "@mui/material";
-import React, { Component }  from 'react';
+import React from 'react';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#0d0d0d' : '#0d0d0d',
@@ -24,7 +24,27 @@ const TecnologiasAprendidad = () => {
         <Grid container spacing={2}>
             <Grid item xs={12}>
             <Item>
-               <Typography fontSize={'35px'} color={'white'} variant="h5" gutterBottom>
+            <Link href="/InformacionPersonal" marginLeft={4}>
+                <Button variant="outlined" style={{     border: '1px solid #0afdd7',color: "white"}}>
+                Personal information
+                </Button>
+            </Link>
+            <Link href="/ProyectosCreados" marginLeft={4} >
+                <Button variant="outlined" style={{     border: '1px solid #0afdd7',color: "white"}}>
+                Projects created
+                </Button>
+            </Link>
+            <Link href="/RedesSociales" marginLeft={4} >
+                <Button variant="outlined" style={{     border: '1px solid #0afdd7',color: "white"}}>
+                Social networks
+                </Button>
+            </Link>
+            <Link href="SolicitudesRecibidas" marginLeft={4}>
+                <Button variant="outlined" style={{     border: '1px solid #0afdd7',color: "white"}}>
+                Applications received
+                </Button>
+            </Link>
+               <Typography fontSize={'30px'} color={'white'} variant="h5" gutterBottom>
                  <p>I am a Full stack Developer who handles the following technologies</p></Typography>
                  <Typography fontSize={'25px'} color={'#ff0080'} variant="h3" gutterBottom><p>Javascript</p></Typography>
                  <Typography fontSize={'25px'} color={'#ff0080'} variant="h3" gutterBottom><p>Hypertext Markup Language</p></Typography>
@@ -41,10 +61,15 @@ const TecnologiasAprendidad = () => {
             <Grid  container spacing={2}>
             <Grid  item xs={12}>
             <Item>             
-                <Link href="/PaginaPrincipal" marginLeft={4}>
+                <Link href="/PaginaPrincipal" marginLeft={0}>
                 <Button variant="outlined" style={{border: '1px solid #0afdd7',color: "#0afdd7"}}>
                 main page
                 </Button>
+                </Link>
+                <Link href="/Contactanos" marginLeft={4}>
+                  <Button variant="outlined" style={{ border: '1px solid #0afdd7', background:'#0afdd7', color: "black"}}>
+                    Contact me!
+                  </Button>
                 </Link>
              </Item>
              </Grid>
