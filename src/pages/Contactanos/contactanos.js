@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { Link } from "@mui/material";
-import React, { Component }  from 'react';
+import React from 'react';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -27,7 +27,7 @@ const Contactanos = () => {
     return (
         <Grid  container spacing={2}>
             <Grid item xs={12}>
-            <img  src={Contact} style={{background:'#ffffff', borderRadius:'30px', width:'200px', 
+            <img  src={Contact} alt='Contact' style={{background:'#ffffff', borderRadius:'30px', width:'200px', 
         heigh:'100px', position:'fixed', marginLeft:'430px', marginTop:'200px', opacity: .4}}/>
             <Item>
             <Link href="/InformacionPersonal" marginLeft={4}>

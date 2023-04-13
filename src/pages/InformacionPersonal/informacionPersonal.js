@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { Link } from "@mui/material";
-import React, { Component }  from 'react';
+import React from 'react';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -27,9 +27,9 @@ const InformacionPersonal = () => {
     return (
         <Grid  container spacing={2}>
             <Grid item xs={12}>
-            <img fontSize={'50px'} src={FondoNegro} style={{background:'#ffffff', width:'500px', 
+            <img fontSize={'50px'} src={FondoNegro} alt='FondoNegro' style={{background:'#ffffff', width:'500px', 
         heigh:'150px', position:'fixed', marginLeft:'50px', borderRadius:'30px'}}/>
-            <img fontSize={'50px'} src={Profile} style={{background:'#ffffff', width:'350px', 
+            <img fontSize={'50px'} src={Profile} alt='Profile' style={{background:'#ffffff', width:'350px', 
         heigh:'150px', position:'fixed', marginLeft:'880px', marginTop:'110px' ,borderRadius:'30px'}}/>
             <Item>
             <Link href="/ProyectosCreados" marginLeft={25} >

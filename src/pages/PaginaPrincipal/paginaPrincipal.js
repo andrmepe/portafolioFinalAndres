@@ -9,14 +9,6 @@ import React  from 'react';
 import Programmer2 from '../assets/Programmer2.png'
 
 
-const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#BCE8EE',
-    color: '#323637',
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: 'center',
-  }));
-
   const Item2 = styled(Paper)(({ theme }) => ({
     backgroundColor: '#000033',
     color: 'white',
@@ -33,15 +25,14 @@ const PaginaPrincipal = () => {
                 Login
                 </Button>
             </Link>
-        <img  src={Programmer2} style={{background:'#ffffff', borderRadius:'30px', width:'200px', 
+        <img  src={Programmer2} alt="programmer2" style={{background:'#ffffff', borderRadius:'30px', width:'200px', 
         heigh:'100px', position:'fixed', marginLeft:'750px', marginTop:'60px', opacity: .4}}/>
-            <item>
+            
                 <Typography  variant="h3" color={"white"} mt={2} marginLeft={5} gutterBottom style={{ background: 'black' }}>
                     Andres Mejia  
                 </Typography>
                 <Typography variant="h3" mt={2} marginLeft={5} color="#ff0080" marginBottom={10}> Full stack Developer - Enyoi <LaptopWindowsIcon fontSize="16px"/>     </Typography> 
-                
-            </item>  
+                 
             <Link href="/InformacionPersonal" marginLeft={4}>
                 <Button variant="outlined" style={{     border: '1px solid #0afdd7',color: "white"}}>
                 Personal information

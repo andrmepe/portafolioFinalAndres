@@ -24,11 +24,11 @@ const ProyectosCreados = () => {
     return (
         <Grid container spacing={2}>
             <Grid item xs={12}>
-            <img  src={Web1} style={{background:'#ffffff', borderRadius:'30px', width:'200px', 
+            <img  src={Web1} alt='Web1' style={{background:'#ffffff', borderRadius:'30px', width:'200px', 
         heigh:'100px', position:'fixed', marginLeft:'50px', marginTop:'5px', opacity: .4}}/>
-        <img  src={Web2} style={{background:'#ffffff', borderRadius:'30px', width:'200px', 
+        <img  src={Web2} alt='Web2' style={{background:'#ffffff', borderRadius:'30px', width:'200px', 
         heigh:'100px', position:'fixed', marginLeft:'950px', marginTop:'290px', opacity: .4}}/>
-        <img  src={Web3} style={{background:'#ffffff', borderRadius:'30px', width:'200px', 
+        <img  src={Web3} alt='Web3' style={{background:'#ffffff', borderRadius:'30px', width:'200px', 
         heigh:'100px', position:'fixed', marginLeft:'515px', marginTop:'170px', opacity: .4}}/>
         
             <Item>
@@ -56,36 +56,31 @@ const ProyectosCreados = () => {
                  <p>Projects Created</p></Typography>
                  <Grid container spacing={2}>
                     <Grid item xs={6}>
-                    
                  <Typography fontSize={'15px'} color={'#ff0080'} variant="h3" gutterBottom><a 
-                 href='https://github.com/andrmepe/challenge-react-router-front' target='_blank' rel='noreferrer'>https://github.com/andrmepe/challenge-react-router-front</a></Typography>
+                 href='https://github.com/andrmepe/peliculas-back' target='_blank' rel=' noopener noreferrer'>https://github.com/andrmepe/peliculas-back</a></Typography>
                  <Typography fontSize={'15px'} color={'#ff0080'} variant="h3" gutterBottom><a 
-                 href='https://github.com/andrmepe/challenge-react-router-front' target='_blank' rel='noreferrer'>https://github.com/andrmepe/challenge-react-router-front</a></Typography>
+                 href='https://github.com/andrmepe/peliculas-back' target='_blank' rel=' noopener noreferrer'>https://github.com/andrmepe/peliculas-back</a></Typography>
                  <Typography fontSize={'15px'} color={'#ff0080'} variant="h3" gutterBottom><a 
-                 href='https://github.com/andrmepe/challenge-react-router-front' target='_blank' rel='noreferrer'>https://github.com/andrmepe/challenge-react-router-front</a></Typography>
+                 href='https://github.com/andrmepe/peliculas-back' target='_blank' rel=' noopener noreferrer'>https://github.com/andrmepe/peliculas-back</a></Typography>
                  <Typography fontSize={'15px'} color={'#ff0080'} variant="h3" gutterBottom><a 
-                 href='https://github.com/andrmepe/challenge-react-router-front' target='_blank' rel='noreferrer'>https://github.com/andrmepe/challenge-react-router-front</a></Typography>
+                 href='https://github.com/andrmepe/peliculas-back' target='_blank' rel=' noopener noreferrer'>https://github.com/andrmepe/peliculas-back</a></Typography>
+
                  <Typography fontSize={'15px'} color={'#ff0080'} variant="h3" gutterBottom><a 
-                 href='https://github.com/andrmepe/peliculas-back' target='_blank' rel='noreferrer'>https://github.com/andrmepe/peliculas-back</a></Typography>
-                 
-                 </Grid>
-                 
-                 
-                    <Grid item xs={6}>
-                    
+                 href='https://github.com/andrmepe/peliculas-back' target='_blank' rel=' noopener noreferrer'>https://github.com/andrmepe/peliculas-back</a></Typography>
+                 </Grid> 
+                <Grid item xs={6}>
                  <Typography fontSize={'15px'} color={'#ff0080'} variant="h3" gutterBottom><a 
-                 href='https://github.com/andrmepe/fron-vehiculos' target='_blank' rel='noreferrer'>https://github.com/andrmepe/fron-vehiculos</a></Typography>
+                 href='https://github.com/andrmepe/fron-vehiculos' target='_blank' rel='noopener noreferrer'>https://github.com/andrmepe/fron-vehiculos</a></Typography>
                  <Typography fontSize={'15px'} color={'#ff0080'} variant="h3" gutterBottom><a 
-                 href='https://github.com/andrmepe/backendVehiculos' target='_blank' rel='noreferrer'>https://github.com/andrmepe/backendVehiculos</a></Typography>
+                 href='https://github.com/andrmepe/backendVehiculos' target='_blank' rel='noopener noreferrer'>https://github.com/andrmepe/backendVehiculos</a></Typography>
                  <Typography fontSize={'15px'} color={'#ff0080'} variant="h3" gutterBottom><a 
-                 href='https://github.com/andrmepe/Primer-commit-FronUser' target='_blank' rel='noreferrer'>https://github.com/andrmepe/Primer-commit-FronUser</a></Typography>
+                 href='https://github.com/andrmepe/Primer-commit-FronUser' target='_blank' rel='noopener noreferrer'>https://github.com/andrmepe/Primer-commit-FronUser</a></Typography>
                  <Typography fontSize={'15px'} color={'#ff0080'} variant="h3" gutterBottom><a 
-                 href='https://github.com/andrmepe/portafolio2' target='_blank' rel='noreferrer'>https://github.com/andrmepe/portafolio2</a></Typography>
+                 href='https://github.com/andrmepe/portafolio2' target='_blank' rel='noopener noreferrer'>https://github.com/andrmepe/portafolio2</a></Typography>
                  <Typography fontSize={'15px'} color={'#ff0080'} variant="h3" gutterBottom><a 
-                 href='https://github.com/andrmepe/portafolio' target='_blank' rel='noreferrer'>https://github.com/andrmepe/portafolio</a></Typography>
-                     
-                    </Grid>
-                    </Grid>      
+                 href='https://github.com/andrmepe/portafolio' target='_blank' rel='noopener noreferrer'>https://github.com/andrmepe/portafolio</a></Typography>     
+                </Grid>
+                </Grid>      
             <Grid item xs={12} >
             <Item>
                 <Typography color={'white'} variant="h5" gutterBottom>

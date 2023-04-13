@@ -7,7 +7,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import Button from '@mui/material/Button';
 import { Link } from "@mui/material";
-import React, { Component }  from 'react';
+import React from 'react';
 import Network1 from '../assets/Network1.jpg'
 import Network2 from '../assets/Network2.jpg'
 
@@ -33,9 +33,9 @@ const RedesSociales = () => {
     return (
         <Grid container spacing={2}>
             <Grid item xs={12}>
-            <img  src={Network1} style={{background:'#ffffff', borderRadius:'30px', width:'350px', 
+            <img  src={Network1} alt='Network1' style={{background:'#ffffff', borderRadius:'30px', width:'350px', 
         heigh:'150px', position:'fixed', marginTop:'65px', opacity: .4}}/>
-         <img  src={Network2} style={{background:'#ffffff', borderRadius:'30px', width:'350px', 
+         <img  src={Network2} alt='Network2' style={{background:'#ffffff', borderRadius:'30px', width:'350px', 
         heigh:'150px', position:'fixed', marginLeft:'950px', marginTop:'67px', opacity: .4}}/>
             <Item>
             <Link href="/InformacionPersonal" marginLeft={4}>
