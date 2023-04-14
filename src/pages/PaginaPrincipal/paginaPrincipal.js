@@ -18,7 +18,7 @@ import Programmer2 from '../assets/Programmer2.png'
 
 const PaginaPrincipal = () => {
     return (
-    <Grid container spacing={2} height='500px' alignContent={'center'} marginTop='30px'  style={{ background: 'black' }}>
+    <Grid container spacing={2}  alignContent={'center'} marginTop='30px'  style={{ background: 'black' }}>
         <Grid item xs={12}>
         <Link href="/Login" marginLeft={4}>
                 <Button variant="outlined" style={{     border: '1px solid #0afdd7',color: "white"}}>

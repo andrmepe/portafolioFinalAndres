@@ -25,8 +25,8 @@ const Registarse = ({setShowLogin, setShowRegistrarse, user, password, handleuse
     }
 
     return(
-        <Grid container justifyContent='center' height='400px' style={{background:'black'}}>
-            <Grid mt='20px' mb='20px' border={'1px solid blue'} borderRadius={'10px'} style={{background:'white'}} >
+        <Grid container justifyContent='center' style={{background:'black'}}>
+            <Grid mt='20px' mb='20px' border={'1px solid black'} borderRadius={'10px'} style={{background:'white'}} >
             <Grid item mt='10px' ml={2}>
             <Typography color={'black'} variant="h4">Register</Typography>
             </Grid>
@@ -43,7 +43,7 @@ const Registarse = ({setShowLogin, setShowRegistrarse, user, password, handleuse
                 variant="outlined" />
             </Grid>
             <Grid mt='30px' ml="135px">
-            <Button variant="outlined" onClick={()=>{sendRegistro()}} 
+            <Button variant="outlined" onClick={()=>{sendRegistro()}}
             style={{ border: '1px solid #1aa3ff', background:'#1aa3ff', color: "white"}}>Register</Button>
             <Button variant="outlined" onClick={()=>{goBack()}} 
             style={{marginLeft:'20px', border: '1px solid red', background:'red',color: "white"}}>go back</Button> 

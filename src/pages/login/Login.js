@@ -60,11 +60,9 @@ const Login = ({setIsAllowed})=>{
     const navigate = useNavigate()
 
     return(
-        <Grid  container justifyContent='center' height='400px' style={{background:'black'}}>   
-            <Grid mt='20px' mb='20px' border={'1px solid blue'} borderRadius={'10px'} style={{background:'white'}} >
-            <Grid item mt='10px' ml={2}>
-            <Typography color={'black'} variant="h4">Log in</Typography>
-            </Grid>
+        <Grid  container width='100%' justifyContent='center' style={{background:'black'}}>   
+            <Grid mt='20px' mb='20px' border={'1px solid black'} borderRadius={'10px'} style={{background:'white'}} >
+            
             {
                 showAlert && 
                 <Alert severity="error">you must complete all the fiels</Alert>
@@ -80,7 +78,10 @@ const Login = ({setIsAllowed})=>{
             }
             {
                 showLogin &&
-            
+            <Grid container>    
+            <Grid item mt='10px' ml={2}>
+            <Typography color={'black'} variant="h4">Log in</Typography>
+            </Grid>
                <Grid item mt='30px' ml='20px' mr='20px'>
                <TextField 
                onChange={handleuser}
@@ -103,12 +104,13 @@ const Login = ({setIsAllowed})=>{
                 </Button>
                </Grid>
                 <Grid mt='30px' ml='175px'>
-               <Link href="/PaginaPrincipal" marginLeft={4}>
+               <Link to="/PaginaPrincipal" marginLeft={4}>
                 <Button variant="outlined"  style={{ border: '1px solid black', background:'white', color: "black"}}>
                 main page
                 </Button>
                 </Link>
                 </Grid>
+            </Grid>
             </Grid>
 
             }

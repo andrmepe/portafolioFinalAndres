@@ -1,3 +1,4 @@
+import './App.css';
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Contactanos from './pages/Contactanos/contactanos.js';
 import InformacionPersonal from "./pages/InformacionPersonal/informacionPersonal.js";
@@ -12,8 +13,9 @@ import Login from "./pages/login/Login.js";
 
 
 
+
 const App = () =>{
-  const [isAllowed, setIsAllowed] = useState(false)
+  const [isAllowed, setIsAllowed] = useState(true)
   /* console.log(isAllowed) */
 
     return(
