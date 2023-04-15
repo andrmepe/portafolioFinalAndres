@@ -28,9 +28,9 @@ const Registarse = ({setShowLogin, setShowRegistrarse, user, password, handleuse
         <Grid container justifyContent='center' style={{background:'black'}}>
             <Grid mt='20px' mb='20px' border={'1px solid black'} borderRadius={'10px'} style={{background:'white'}} >
             <Grid item mt='10px' ml={2}>
-            <Typography color={'black'} variant="h4">Register</Typography>
+            <Typography color={'black'} ml='60px' variant="h4">Register</Typography>
             </Grid>
-            <Grid item mt='30px' ml='20px' mr='20px'>
+            <Grid item mt='30px' ml='75px' mr='70px'>
                 <TextField
                 onChange={handleuser}
                 id='user'
@@ -44,9 +44,9 @@ const Registarse = ({setShowLogin, setShowRegistrarse, user, password, handleuse
             </Grid>
             <Grid mt='30px' ml="135px">
             <Button variant="outlined" onClick={()=>{sendRegistro()}}
-            style={{ border: '1px solid #1aa3ff', background:'#1aa3ff', color: "white"}}>Register</Button>
+            style={{ border: '1px solid #1aa3ff', marginLeft:'55px',marginBottom:'30px', background:'#1aa3ff', color: "white"}}>Register</Button>
             <Button variant="outlined" onClick={()=>{goBack()}} 
-            style={{marginLeft:'20px', border: '1px solid red', background:'red',color: "white"}}>go back</Button> 
+            style={{marginLeft:'20px', marginBottom:'30px',border: '1px solid red', background:'red',color: "white"}}>go back</Button> 
             </Grid>
             </Grid>
         </Grid>

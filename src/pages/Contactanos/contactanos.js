@@ -96,33 +96,33 @@ const Contactanos = () => {
     }
 
     return (
-        <Grid  container spacing={2}>
+        <Grid  container width='100%' spacing={2}>
             <Grid item xs={12}>
             <img  src={Contact} alt='Contact' style={{background:'#ffffff', borderRadius:'30px', width:'200px', 
         heigh:'100px', position:'fixed', marginLeft:'430px', marginTop:'200px', opacity: .4}}/>
             <Item>
             <Link to="/InformacionPersonal">
-                <Button variant="outlined" style={{     border: '1px solid #0afdd7',color: "white"}}>
+                <Button variant="outlined" style={{marginLeft:'60px', border: '1px solid #0afdd7',color: "white"}}>
                 Personal information
                 </Button>
             </Link>
-            <Link to="/ProyectosCreados" marginLeft={4} >
-                <Button variant="outlined" style={{     border: '1px solid #0afdd7',color: "white"}}>
+            <Link to="/ProyectosCreados" >
+                <Button variant="outlined" style={{ marginLeft:'30px', border: '1px solid #0afdd7',color: "white"}}>
                 Projects created
                 </Button>
             </Link>
-            <Link to="/RedesSociales" marginLeft={4} >
-                <Button variant="outlined" style={{     border: '1px solid #0afdd7',color: "white"}}>
+            <Link to="/RedesSociales" >
+                <Button variant="outlined" style={{marginLeft:'30px', border: '1px solid #0afdd7',color: "white"}}>
                 Social networks
                 </Button>
             </Link>
-            <Link to="/TecnologiasAprendidas" marginLeft={4}>
-                <Button variant="outlined" style={{border: '1px solid #0afdd7',color: "white"}}>
+            <Link to="/TecnologiasAprendidas" >
+                <Button variant="outlined" style={{ marginLeft:'30px', border: '1px solid #0afdd7',color: "white"}}>
                 Technologies learned
                 </Button>
             </Link>   
-            <Link to="SolicitudesRecibidas" marginLeft={4}>
-                <Button variant="outlined" style={{     border: '1px solid #0afdd7',color: "white"}}>
+            <Link to="SolicitudesRecibidas" >
+                <Button variant="outlined" style={{ marginLeft:'30px', border: '1px solid #0afdd7',color: "white"}}>
                 Applications received
                 </Button>
             </Link>
@@ -136,7 +136,7 @@ const Contactanos = () => {
             <Grid  container spacing={2}>
             <Grid item xs={6}>
             <form onSubmit={handleSubmit}
-                style={{backgroundColor:'white', height:'300px'}}
+                style={{backgroundColor:'white', marginLeft:'175px', width:'200px'}}
                 noValidate
                 autoComplete="off"
                 >
@@ -167,17 +167,13 @@ const Contactanos = () => {
                     </Grid>
                 </Grid>
             <Item>             
-                <Link to="/PaginaPrincipal" marginLeft={3}>
-                <Button variant="outlined" style={{border: '1px solid #0afdd7',color: "#0afdd7"}}>
+                <Link to="/PaginaPrincipal" >
+                <Button variant="outlined" style={{ marginLeft:'25px', border: '1px solid #0afdd7',color: "#0afdd7"}}>
                 main page</Button></Link>
              </Item>
                 </Box>
                 </Grid>
-                </Grid>    
-            <Grid  container spacing={2}>
-            <Grid  item xs={12}>
-             </Grid>
-             </Grid>   
+                </Grid>      
             </Item>
             </Grid>
       </Grid>

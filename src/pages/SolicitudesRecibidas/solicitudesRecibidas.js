@@ -28,31 +28,31 @@ const SolicitudesRecibidas = () => {
     console.log(data)
 
     return(
-    <Grid container>
-        <Grid item>
-            <Typography>Solicitudes</Typography>
+    <Grid container justifyContent='center' width='100%' style={{ background: 'white'}}>
+        <Grid item ml='20px'>
+            <Typography><b>Solicitudes</b></Typography>
         </Grid>
         <Grid item>
         <TableContainer >
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell> Name </TableCell>
-            <TableCell align="right">Last name</TableCell>
-            <TableCell align="right">Phone</TableCell>
-            <TableCell align="right">E-mail</TableCell>
-            <TableCell align="right">Message</TableCell>
+            <TableCell style={{color:'#0afdd7'}} align="left"><b>Name</b></TableCell>
+            <TableCell style={{color:'#0afdd7'}} align="left"><b>Last name</b></TableCell>
+            <TableCell style={{color:'#0afdd7'}} align="left"><b>Phone</b></TableCell>
+            <TableCell style={{color:'#0afdd7'}} align="left"><b>E-mail</b></TableCell>
+            <TableCell style={{color:'#0afdd7'}} align="left"><b>Message</b></TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {
             data.map((row)=>(
                <TableRow key={row.id} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}> 
-                <TableCell>{row.name}</TableCell>
-                <TableCell>{row.lastname}</TableCell>
-                <TableCell>{row.phone}</TableCell>
-                <TableCell>{row.email}</TableCell>
-                <TableCell>{row.message}</TableCell>
+                <TableCell >{row.name}</TableCell>
+                <TableCell >{row.lastname}</TableCell>
+                <TableCell >{row.phone}</TableCell>
+                <TableCell >{row.email}</TableCell>
+                <TableCell >{row.message}</TableCell>
                </TableRow> 
             ))
           }

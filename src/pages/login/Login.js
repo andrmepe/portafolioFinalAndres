@@ -60,8 +60,8 @@ const Login = ({setIsAllowed})=>{
     const navigate = useNavigate()
 
     return(
-        <Grid  container width='100%' justifyContent='center' style={{background:'black'}}>   
-            <Grid mt='20px' mb='20px' border={'1px solid black'} borderRadius={'10px'} style={{background:'white'}} >
+        <Grid  container width={'100%'} justifyContent='center' style={{background:'black'}}>   
+            <Grid mt='40px' mb='40px' border={'1px solid black'} borderRadius={'10px'} style={{background:'white'}} >
             
             {
                 showAlert && 
@@ -78,17 +78,17 @@ const Login = ({setIsAllowed})=>{
             }
             {
                 showLogin &&
-            <Grid container>    
-            <Grid item mt='10px' ml={2}>
-            <Typography color={'black'} variant="h4">Log in</Typography>
+            <Grid container width={'100%'}>    
+            <Grid item mt={'10px'} ml={2}>
+            <Typography  color={'black'} variant="h4">Log in</Typography>
             </Grid>
-               <Grid item mt='30px' ml='20px' mr='20px'>
+               <Grid item mt={'60px'} ml='20px' mr='20px'>
                <TextField 
                onChange={handleuser}
                id="user"
                label="user"
                variant="outlined"/>
-               <TextField style={{marginLeft:'20px'}}
+               <TextField style={{marginLeft:'20px', marginRight:'120px'}}
                onChange={handlepassword}
                id="password"
                label="password"
@@ -104,8 +104,8 @@ const Login = ({setIsAllowed})=>{
                 </Button>
                </Grid>
                 <Grid mt='30px' ml='175px'>
-               <Link to="/PaginaPrincipal" marginLeft={4}>
-                <Button variant="outlined"  style={{ border: '1px solid black', background:'white', color: "black"}}>
+               <Link to="/PaginaPrincipal" >
+                <Button variant="outlined"  style={{marginBottom:'40px', border: '1px solid black', background:'white', color: "black"}}>
                 main page
                 </Button>
                 </Link>
