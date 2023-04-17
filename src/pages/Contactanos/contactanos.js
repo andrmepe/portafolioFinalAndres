@@ -9,6 +9,7 @@ import React, { useState } from 'react';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import TextField from '@mui/material/TextField';
 import Contact from '../assets/Contact.png'
 import axios from 'axios';
@@ -29,7 +30,8 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const Contactanos = ({name, setName, lastName, setLastName, phone, setPhone,email, setEmail,message, setMessage}) => {
     const [showAlertSucces, setShowAlertSucces] = useState(false)
-    const [showAlertFiels, setShowAlertFiels] = useState(false) 
+    const [showAlertFiels, setShowAlertFiels] = useState(false)
+   
 
   /*   const clearFiels =()=>{
         setName('')
@@ -100,7 +102,7 @@ const Contactanos = ({name, setName, lastName, setLastName, phone, setPhone,emai
             <img  src={Contact} alt='Contact' style={{background:'#ffffff', borderRadius:'30px', width:'200px', 
         heigh:'100px', position:'fixed', marginLeft:'430px', marginTop:'200px', opacity: .4}}/>
             <Item>
-            <Botones></Botones>
+            <Grid ml='70px' mb='20px' mt='20px'><Botones></Botones></Grid>
             <Typography marginLeft={'175px'} fontSize={'20px'} color={'#ff0080'} variant="h3" gutterBottom>Please fill out the quick form and we will be in touch soon</Typography>       
             {
                 showAlertSucces && <Alert severity="success">sent succesfully</Alert>
@@ -139,13 +141,14 @@ const Contactanos = ({name, setName, lastName, setLastName, phone, setPhone,emai
                     
                  <Typography>Redes sociales:</Typography>
                     
-                 <Link to="https://www.facebook.com/andres.m.perez.581" target={"_blank"}><FacebookIcon  fontSize='30px' /></Link>
-                 <Link to="https://www.linkedin.com/in/andres-mejia-374483240/" target={"_blank"}><LinkedInIcon fontSize='30px' /></Link>
-                 <Link to="https://www.instagram.com/" target={"_blank"}><InstagramIcon fontSize='30px' /></Link>
+                 <Link to="https://www.facebook.com/andres.m.perez.581" style={{color:'#0afdd7'}} target={"_blank"}><FacebookIcon /></Link>
+                 <Link to="https://www.linkedin.com/in/andres-mejia-374483240/" style={{color:'#0afdd7'}} target={"_blank"}><LinkedInIcon /></Link>
+                 <Link to="https://www.instagram.com/" style={{color:'#0afdd7'}} target={"_blank"}><InstagramIcon /></Link>
+                 <Link to="https://wa.link/vok4hw" style={{color:'#0afdd7'}} target={"_blank"}rel=' noopener noreferrer'><WhatsAppIcon /></Link>   
                     </Grid>
                 </Grid>
             <Item>             
-               <BotonPage></BotonPage>
+               <Grid ml='20px' mt='10px'><BotonPage></BotonPage></Grid>
              </Item>
                 </Box>
                 </Grid>

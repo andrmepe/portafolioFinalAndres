@@ -60,7 +60,7 @@ const InformacionPersonal = () => {
             <Grid  container spacing={2}>
             <Grid  item xs={12}>
             <Item>             
-                <Grid ml='480px'>
+                <Grid ml='520px'>
                 <BotonPage></BotonPage>
                 <BotonContactame></BotonContactame>
                 </Grid>
