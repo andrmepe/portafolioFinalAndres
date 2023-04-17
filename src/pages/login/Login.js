@@ -2,7 +2,7 @@ import { Button, TextField} from "@mui/material"
 import Grid from "@mui/material/Grid"
 import axios from "axios";
 import React, { useState }  from 'react';
-import { useNavigate} from "react-router-dom";
+import { useNavigate, Link} from "react-router-dom";
 import Alert from '@mui/material/Alert';
 import Registarse from "../registarse/Registrarse.js";
 import Typography from "@mui/material/Typography";
@@ -103,10 +103,11 @@ const Login = ({setIsAllowed})=>{
                onClick={()=>{registarUser()}} style={{marginLeft:'20px', border: '1px solid red', background:'red',color: "white"}}>
                 Register
                 </Button>
-               </Grid>
-                <Grid mt='30px' ml='175px'>
-               <BotonPage></BotonPage>
                 </Grid>
+                <Grid mt='20px' mb='20px' ml='140px'><Link to="/PaginaPrincipal"style={{marginLeft:'40px', fontSize:'20px', 
+                textDecoration:'none', padding:'5px',borderRadius:'5px',border: '1px solid #0afdd7',background:'white',color: "#0afdd7"}}>
+                main page
+                </Link></Grid>
             </Grid>
             </Grid>
 

@@ -13,6 +13,7 @@ import FondoNegro from '../assets/FondoNegro.jpg'
 import Botones from '../../components/botones/Botones';
 import BotonContactame from '../../components/botonContactame/BotonContactame.js';
 import BotonPage from '../../components/botonPage/BotonPage';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -29,16 +30,16 @@ const InformacionPersonal = () => {
     return (
         <Grid  container spacing={2}>
             <Grid item xs={12}>
-            <img fontSize={'50px'} src={FondoNegro} alt='FondoNegro' style={{background:'#ffffff', width:'450px', 
+            <img fontSize={'50px'} src={FondoNegro} alt='FondoNegro' style={{background:'#ffffff', width:'470px', 
         heigh:'150px', position:'fixed', marginLeft:'50px', marginTop:'40px', marginBottom:'50px',borderRadius:'30px'}}/>
             <img fontSize={'50px'} src={Profile} alt='Profile' style={{background:'#ffffff', width:'350px', 
         heigh:'150px', position:'fixed', marginLeft:'880px', marginTop:'110px' ,borderRadius:'30px'}}/>
             <Item>
-          <Botones></Botones>
-            <Typography marginLeft={'545px'} fontSize={'25px'} color={'#0afdd7'} variant="h3" gutterBottom>Hi</Typography>
-            <Typography marginLeft={'545px'} fontSize={'25px'} color={'#ff0080'} variant="h3" gutterBottom>I am a Developer</Typography>
-            <Typography marginLeft={'545px'} fontSize={'25px'} color={'white '} variant="h3" gutterBottom>____________________________</Typography>
-            <Typography marginLeft={'545px'} fontSize={'25px'} color={'#0afdd7'} variant="h3" gutterBottom>Andres Mejia</Typography>
+          <Grid ml={'100px'}><Botones></Botones></Grid>
+            <Typography ml={'545px'} mt={'20px'} fontSize={'25px'} color={'#0afdd7'} variant="h3" gutterBottom>Hi</Typography>
+            <Typography ml={'545px'} mt={'20px'} fontSize={'25px'} color={'#ff0080'} variant="h3" gutterBottom>I am a Developer</Typography>
+            <Typography ml={'545px'} fontSize={'25px'} color={'white '} variant="h3" gutterBottom>____________________________</Typography>
+            <Typography ml={'545px'} mt={'20px'} fontSize={'25px'} color={'#0afdd7'} variant="h3" gutterBottom>Andres Mejia</Typography>
                  <Box sx={{ flexGrow: 1 }}>
                 <Grid  marginLeft={'520px'} container spacing={2}>
                     <Grid  item xs={8}> <Item  >Name: Andres Mejia</Item>  </Grid>
@@ -46,9 +47,11 @@ const InformacionPersonal = () => {
                     <Grid item xs={8}>  <Item>E-mail: anmepe.sud@gmail.com</Item>  </Grid>
                     <Grid item xs={8}>
                     <Typography>Redes sociales:</Typography>
-                    <Link to="https://www.facebook.com/" target={"_blank"} rel=' noopener noreferrer'><FacebookIcon /></Link>
-                    <Link to="https://www.linkedin.com/feed/" target={"_blank"}rel=' noopener noreferrer'><LinkedInIcon/></Link>
-                    <Link to="https://www.instagram.com/" target={"_blank"}rel=' noopener noreferrer'><InstagramIcon /></Link>
+                    <Link to="https://www.facebook.com/" style={{color:'#0afdd7'}} target={"_blank"} rel=' noopener noreferrer'><FacebookIcon /></Link>
+                    <Link to="https://www.linkedin.com/feed/" style={{color:'#0afdd7'}} target={"_blank"}rel=' noopener noreferrer'><LinkedInIcon/></Link>
+                    <Link to="https://www.instagram.com/" style={{color:'#0afdd7'}} target={"_blank"}rel=' noopener noreferrer'><InstagramIcon /></Link>
+                    <Link to="https://wa.link/vok4hw" style={{color:'#0afdd7'}} target={"_blank"}rel=' noopener noreferrer'><WhatsAppIcon /></Link>
+
                     </Grid>
                 </Grid>
                 </Box>        
@@ -57,8 +60,10 @@ const InformacionPersonal = () => {
             <Grid  container spacing={2}>
             <Grid  item xs={12}>
             <Item>             
+                <Grid ml='480px'>
                 <BotonPage></BotonPage>
                 <BotonContactame></BotonContactame>
+                </Grid>
              </Item>
              </Grid>
              </Grid>   

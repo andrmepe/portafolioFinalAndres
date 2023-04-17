@@ -12,6 +12,8 @@ import Network2 from '../assets/Network2.jpg'
 import Botones from '../../components/botones/Botones';
 import BotonContactame from '../../components/botonContactame/BotonContactame';
 import BotonPage from '../../components/botonPage/BotonPage';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import { Gif } from '@mui/icons-material';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#0d0d0d' : '#0d0d0d',
@@ -27,7 +29,7 @@ const Item2 = styled(Paper)(({ theme }) => ({
     color: 'white',
     ...theme.typography.body2,
     padding: theme.spacing(1),
-    height: '50px',
+    height: '110px',
   }));
 
 
@@ -40,17 +42,19 @@ const RedesSociales = () => {
          <img  src={Network2} alt='Network2' style={{background:'#ffffff', borderRadius:'30px', width:'350px', 
         heigh:'150px', position:'fixed', marginLeft:'950px', marginTop:'67px', opacity: .4}}/>
             <Item>
-           <Botones></Botones>
-            <Typography color={'white'} fontSize={'35px'} variant="h5" gutterBottom>
+           <Grid marginLeft='90px'><Botones></Botones></Grid>
+            <Typography color={'white'} fontSize={'35px'} mb='50px' mt='30px' variant="h5" gutterBottom>
                  In these networks you can find me</Typography>
-                 <Link to="https://www.facebook.com/andres.m.perez.581" target={"_blank"} rel=' noopener noreferrer'><FacebookIcon fontSize='60px' /></Link>
-                 <Link to="https://www.linkedin.com/in/andres-mejia-374483240/" target={"_blank"} rel=' noopener noreferrer'><LinkedInIcon fontSize='60px' /></Link>
-                 <Link to="https://www.instagram.com/" target={"_blank"} rel=' noopener noreferrer'><InstagramIcon fontSize='60px' /></Link>
-                  
+                 <Link to="https://www.facebook.com/andres.m.perez.581" style={{color:'#0afdd7'}} target={"_blank"} rel=' noopener noreferrer'><FacebookIcon style={{fontSize:'60px'}}/></Link>
+                 <Link to="https://www.linkedin.com/in/andres-mejia-374483240/" style={{color:'#0afdd7'}}target={"_blank"} rel=' noopener noreferrer'><LinkedInIcon style={{fontSize:'60px'}}/></Link>
+                 <Link to="https://www.instagram.com/" style={{color:'#0afdd7'}}target={"_blank"} rel=' noopener noreferrer'><InstagramIcon style={{fontSize:'60px'}}/></Link>
+                 <Link to="https://wa.link/vok4hw" style={{color:'#0afdd7'}} target={"_blank"}rel=' noopener noreferrer'><WhatsAppIcon style={{fontSize:'60px'}}/></Link>
             </Item>
                 <Item2>           
-               <BotonPage></BotonPage>
+                <Grid ml='450px' mt='40px'>
+                <BotonPage></BotonPage>
                 <BotonContactame></BotonContactame>
+                </Grid>
                 </Item2>
             </Grid>      
       </Grid>
