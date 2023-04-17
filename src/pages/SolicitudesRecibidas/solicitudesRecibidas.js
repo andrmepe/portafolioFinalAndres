@@ -11,7 +11,8 @@ import axios from "axios";
 import { Button } from "@mui/material";
 
 
-const SolicitudesRecibidas = () => {
+const SolicitudesRecibidas = ({id, setId, name,setName, lastname, setLastName, phone, setPhone, email, setEmail, 
+  message, setMessage}) => {
     const [data, setData] = useState([])
     const Url = 'http://localhost:3001/contactanos'
     const getData = async ()=>{
@@ -28,10 +29,19 @@ const SolicitudesRecibidas = () => {
     },[])
     console.log(data)
 
-    const edit =(()=>{
-
+    const edit =((obj)=>{
+      setId(obj.id)
+      setName(obj.name)
+      setName(obj.lastName)
+      setName(obj.phone)
+      setName(obj.email)
+      setName(obj.message)
     })
-    
+
+    const update =()=>{
+      axios.put(`http://localhost:3001/contactanos/editRequest/${id}`)
+    }
+    console.log(name, lastname, phone, email, message)
     return(
     <Grid container justifyContent='center' width='100%' style={{ background: 'white'}}>
         <Grid item ml='20px'>
@@ -54,7 +64,7 @@ const SolicitudesRecibidas = () => {
         <TableBody>
           {
             data.map((row)=>(
-               <TableRow key={row.id} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}> 
+               <TableRow key={row.id} onClick={()=>{edit()}} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}> 
                 <TableCell >{row.name}</TableCell>
                 <TableCell >{row.lastname}</TableCell>
                 <TableCell >{row.phone}</TableCell>

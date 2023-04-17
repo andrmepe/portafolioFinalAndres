@@ -16,6 +16,7 @@ import Login from "./pages/login/Login.js";
 
 const App = () =>{
   const [isAllowed, setIsAllowed] = useState(true)
+  const [id, setId] = useState(0)
   const [name, setName] = useState('')
   const [lastName, setLastName] = useState('')
   const [phone, setPhone] = useState('')
@@ -41,7 +42,7 @@ const App = () =>{
         <Route path="/redesSociales" element = {<RedesSociales/>}></Route>
         <Route path="/proyectosCreados" element = {<ProyectosCreados/>}></Route>
         <Route path="/tecnologiasAprendidas" element = {<TecnologiasAprendidas/>}></Route>
-        <Route path="/solicitudesRecibidas" element = {<SolicitudesRecibidas name={name} setName={setName} lastName={lastName} 
+        <Route path="/solicitudesRecibidas" element = {<SolicitudesRecibidas id={id} setId={setId} name={name} setName={setName} lastName={lastName} 
         setLastName={setLastName} phone={phone} setPhone={setPhone} email={email} setEmail={setEmail}message={message} setMessage={setMessage}/>}></Route>
       </Routes>
     </BrowserRouter>
