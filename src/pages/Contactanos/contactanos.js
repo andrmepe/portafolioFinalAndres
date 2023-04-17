@@ -13,6 +13,8 @@ import TextField from '@mui/material/TextField';
 import Contact from '../assets/Contact.png'
 import axios from 'axios';
 import { Alert } from '@mui/material';
+import Botones from '../../components/botones/Botones';
+import BotonPage from '../../components/botonPage/BotonPage';
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -25,22 +27,17 @@ const Item = styled(Paper)(({ theme }) => ({
   
 }));
 
-const Contactanos = () => {
-    const [name, setName] = useState('')
-    const [lastName, setLastName] = useState('')
-    const [phone, setPhone] = useState('')
-    const [email, setEmail] = useState('')
-    const [message, setMessage] = useState('')
+const Contactanos = ({name, setName, lastName, setLastName, phone, setPhone,email, setEmail,message, setMessage}) => {
     const [showAlertSucces, setShowAlertSucces] = useState(false)
     const [showAlertFiels, setShowAlertFiels] = useState(false) 
 
-    const clearFiels =()=>{
+  /*   const clearFiels =()=>{
         setName('')
         setLastName('')
         setPhone('')
         setEmail('')
         setMessage('')
-    }
+    } */
 
     const timeShowAlertSucces = ()=>{
         setTimeout(()=>{
@@ -75,7 +72,9 @@ const Contactanos = () => {
          if(name === '' || lastName === '' || phone === '' || email === '' || message === ''){
             setShowAlertFiels(true)
             timeShowAlertFiels()
+            console.log('entro if')
         } else {
+            console.log('entro else')
             axios.post('http://localhost:3001/contactanos/createRequest', {
                 name: name,
                 lastname: lastName,
@@ -83,50 +82,26 @@ const Contactanos = () => {
                 email: email,
                 message: message
             }).then ((res)=>{
-               /*  setName('')
+                setName('')
                 setLastName('')
                 setPhone('')
                 setEmail('')
-                setMessage('') */
+                setMessage('')
                 setShowAlertSucces(true)
                 timeShowAlertSucces()
-                clearFiels()
+                /* clearFiels() */
             })
         }
     }
-
+    console.log(name, lastName, phone, email, message)
     return (
         <Grid  container width='100%' spacing={2}>
             <Grid item xs={12}>
             <img  src={Contact} alt='Contact' style={{background:'#ffffff', borderRadius:'30px', width:'200px', 
         heigh:'100px', position:'fixed', marginLeft:'430px', marginTop:'200px', opacity: .4}}/>
             <Item>
-            <Link to="/InformacionPersonal">
-                <Button variant="outlined" style={{marginLeft:'60px', border: '1px solid #0afdd7',color: "white"}}>
-                Personal information
-                </Button>
-            </Link>
-            <Link to="/ProyectosCreados" >
-                <Button variant="outlined" style={{ marginLeft:'30px', border: '1px solid #0afdd7',color: "white"}}>
-                Projects created
-                </Button>
-            </Link>
-            <Link to="/RedesSociales" >
-                <Button variant="outlined" style={{marginLeft:'30px', border: '1px solid #0afdd7',color: "white"}}>
-                Social networks
-                </Button>
-            </Link>
-            <Link to="/TecnologiasAprendidas" >
-                <Button variant="outlined" style={{ marginLeft:'30px', border: '1px solid #0afdd7',color: "white"}}>
-                Technologies learned
-                </Button>
-            </Link>   
-            <Link to="SolicitudesRecibidas" >
-                <Button variant="outlined" style={{ marginLeft:'30px', border: '1px solid #0afdd7',color: "white"}}>
-                Applications received
-                </Button>
-            </Link>
-            <Typography marginLeft={'175px'} fontSize={'20px'} color={'#ff0080'} variant="h3" gutterBottom><p>Please fill out the quick form and we will be in touch soon</p></Typography>       
+            <Botones></Botones>
+            <Typography marginLeft={'175px'} fontSize={'20px'} color={'#ff0080'} variant="h3" gutterBottom>Please fill out the quick form and we will be in touch soon</Typography>       
             {
                 showAlertSucces && <Alert severity="success">sent succesfully</Alert>
             }
@@ -161,15 +136,16 @@ const Contactanos = () => {
                     <Grid item xs={8}>  <Item>Phone: 0451049712</Item>     </Grid>
                     <Grid item xs={8}>  <Item>E-mail: anmepe.sud@gmail.com</Item>  </Grid>
                     <Grid item xs={8}>
-                    <Typography><Item> Redes sociales:<Link to="https://www.facebook.com/andres.m.perez.581" target={"_blank"}/><FacebookIcon  fontSize='30px' />
-                 <Link to="https://www.linkedin.com/in/andres-mejia-374483240/" target={"_blank"}/><LinkedInIcon fontSize='30px' />
-                 <Link to="https://www.instagram.com/" target={"_blank"}/><InstagramIcon fontSize='30px'   /></Item></Typography>
+                    
+                 <Typography>Redes sociales:</Typography>
+                    
+                 <Link to="https://www.facebook.com/andres.m.perez.581" target={"_blank"}><FacebookIcon  fontSize='30px' /></Link>
+                 <Link to="https://www.linkedin.com/in/andres-mejia-374483240/" target={"_blank"}><LinkedInIcon fontSize='30px' /></Link>
+                 <Link to="https://www.instagram.com/" target={"_blank"}><InstagramIcon fontSize='30px' /></Link>
                     </Grid>
                 </Grid>
             <Item>             
-                <Link to="/PaginaPrincipal" >
-                <Button variant="outlined" style={{ marginLeft:'25px', border: '1px solid #0afdd7',color: "#0afdd7"}}>
-                main page</Button></Link>
+               <BotonPage></BotonPage>
              </Item>
                 </Box>
                 </Grid>

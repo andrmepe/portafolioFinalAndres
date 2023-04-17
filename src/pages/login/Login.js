@@ -2,10 +2,11 @@ import { Button, TextField} from "@mui/material"
 import Grid from "@mui/material/Grid"
 import axios from "axios";
 import React, { useState }  from 'react';
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 import Alert from '@mui/material/Alert';
 import Registarse from "../registarse/Registrarse.js";
 import Typography from "@mui/material/Typography";
+import BotonPage from "../../components/botonPage/BotonPage.js";
 
 const Login = ({setIsAllowed})=>{
     const [user, setUser] = useState('');
@@ -104,11 +105,7 @@ const Login = ({setIsAllowed})=>{
                 </Button>
                </Grid>
                 <Grid mt='30px' ml='175px'>
-               <Link to="/PaginaPrincipal" >
-                <Button variant="outlined"  style={{marginBottom:'40px', border: '1px solid black', background:'white', color: "black"}}>
-                main page
-                </Button>
-                </Link>
+               <BotonPage></BotonPage>
                 </Grid>
             </Grid>
             </Grid>

@@ -16,9 +16,15 @@ import Login from "./pages/login/Login.js";
 
 const App = () =>{
   const [isAllowed, setIsAllowed] = useState(true)
+  const [name, setName] = useState('')
+  const [lastName, setLastName] = useState('')
+  const [phone, setPhone] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
   /* console.log(isAllowed) */
 
     return(
+      <>
     <BrowserRouter>
       <Routes>
       <Route path='/' element={<Navigate to={'/PaginaPrincipal'}/>}></Route>
@@ -28,15 +34,18 @@ const App = () =>{
       </Route>
 
         <Route path="/login" element = {<Login setIsAllowed={setIsAllowed}/>}></Route>
-        <Route path="/contactanos" element = {<Contactanos/>}></Route>
+        <Route path="/contactanos" element = {<Contactanos name={name} setName={setLastName} lastName={lastName} 
+        setLastName={setLastName} phone={phone} setPhone={setPhone} email={email} setEmail={setEmail} message={message} setMessage={setMessage}/>}></Route>
         <Route path="/informacionPersonal" element = {<InformacionPersonal/>}></Route>
         <Route path="/paginaPrincipal" element = {<PaginaPrincipal/>}></Route>
         <Route path="/redesSociales" element = {<RedesSociales/>}></Route>
         <Route path="/proyectosCreados" element = {<ProyectosCreados/>}></Route>
         <Route path="/tecnologiasAprendidas" element = {<TecnologiasAprendidas/>}></Route>
-        <Route path="/solicitudesRecibidas" element = {<SolicitudesRecibidas/>}></Route>
+        <Route path="/solicitudesRecibidas" element = {<SolicitudesRecibidas name={name} setName={setName} lastName={lastName} 
+        setLastName={setLastName} phone={phone} setPhone={setPhone} email={email} setEmail={setEmail}message={message} setMessage={setMessage}/>}></Route>
       </Routes>
     </BrowserRouter>
+    </>
   )
 }
 

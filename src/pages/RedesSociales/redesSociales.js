@@ -5,11 +5,13 @@ import Typography from '@mui/material/Typography';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import Button from '@mui/material/Button';
-import { Link } from "@mui/material";
+import { Link } from "react-router-dom";
 import React from 'react';
 import Network1 from '../assets/Network1.jpg'
 import Network2 from '../assets/Network2.jpg'
+import Botones from '../../components/botones/Botones';
+import BotonContactame from '../../components/botonContactame/BotonContactame';
+import BotonPage from '../../components/botonPage/BotonPage';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#0d0d0d' : '#0d0d0d',
@@ -38,45 +40,17 @@ const RedesSociales = () => {
          <img  src={Network2} alt='Network2' style={{background:'#ffffff', borderRadius:'30px', width:'350px', 
         heigh:'150px', position:'fixed', marginLeft:'950px', marginTop:'67px', opacity: .4}}/>
             <Item>
-            <Link href="/InformacionPersonal" marginLeft={4}>
-                <Button variant="outlined" style={{     border: '1px solid #0afdd7',color: "white"}}>
-                Personal information
-                </Button>
-            </Link>
-            <Link href="/ProyectosCreados" marginLeft={4} >
-                <Button variant="outlined" style={{     border: '1px solid #0afdd7',color: "white"}}>
-                Projects created
-                </Button>
-            </Link>
-            <Link href="/TecnologiasAprendidas" marginLeft={4}>
-                <Button variant="outlined" style={{border: '1px solid #0afdd7',color: "white"}}>
-                Technologies learned
-                </Button>
-            </Link>
-            <Link href="SolicitudesRecibidas" marginLeft={4}>
-                <Button variant="outlined" style={{     border: '1px solid #0afdd7',color: "white"}}>
-                Applications received
-                </Button>
-            </Link>
+           <Botones></Botones>
             <Typography color={'white'} fontSize={'35px'} variant="h5" gutterBottom>
-                 <p>In these networks you can find me</p></Typography>
-                <Typography color={'white'} fontSize={'60px'} variant="h5" gutterBottom>
-                 <a href="https://www.facebook.com/andres.m.perez.581" target={"_blank"}><FacebookIcon fontSize='30px' /></a>
-                 <a href="https://www.linkedin.com/in/andres-mejia-374483240/" target={"_blank"}><LinkedInIcon fontSize='30px' /></a>
-                 <a href="https://www.instagram.com/" target={"_blank"}><InstagramIcon fontSize='30px'   /></a>
-                </Typography>   
+                 In these networks you can find me</Typography>
+                 <Link to="https://www.facebook.com/andres.m.perez.581" target={"_blank"} rel=' noopener noreferrer'><FacebookIcon fontSize='60px' /></Link>
+                 <Link to="https://www.linkedin.com/in/andres-mejia-374483240/" target={"_blank"} rel=' noopener noreferrer'><LinkedInIcon fontSize='60px' /></Link>
+                 <Link to="https://www.instagram.com/" target={"_blank"} rel=' noopener noreferrer'><InstagramIcon fontSize='60px' /></Link>
+                  
             </Item>
                 <Item2>           
-                <Link href="/PaginaPrincipal" marginLeft={58}>
-                <Button variant="outlined" style={{ border: '1px solid #0afdd7',color: "#0afdd7"}}>
-                main page
-                </Button>
-                </Link>
-                <Link href="/Contactanos" marginLeft={4}>
-                  <Button variant="outlined" style={{ border: '1px solid #0afdd7', background:'#0afdd7', color: "black"}}>
-                    Contact me!
-                  </Button>
-                </Link> 
+               <BotonPage></BotonPage>
+                <BotonContactame></BotonContactame>
                 </Item2>
             </Grid>      
       </Grid>
