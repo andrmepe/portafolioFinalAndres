@@ -14,6 +14,7 @@ import BotonContactame from '../../components/botonContactame/BotonContactame';
 import BotonPage from '../../components/botonPage/BotonPage';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import { Gif } from '@mui/icons-material';
+import BotonRedesSociales from '../../components/botonRedesSociales/BotonRedesSociales';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#0d0d0d' : '#0d0d0d',
@@ -45,13 +46,10 @@ const RedesSociales = () => {
            <Grid marginLeft='90px'><Botones></Botones></Grid>
             <Typography color={'white'} fontSize={'35px'} mb='50px' mt='30px' variant="h5" gutterBottom>
                  In these networks you can find me</Typography>
-                 <Link to="https://www.facebook.com/andres.m.perez.581" style={{color:'#0afdd7'}} target={"_blank"} rel=' noopener noreferrer'><FacebookIcon style={{fontSize:'60px'}}/></Link>
-                 <Link to="https://www.linkedin.com/in/andres-mejia-374483240/" style={{color:'#0afdd7'}}target={"_blank"} rel=' noopener noreferrer'><LinkedInIcon style={{fontSize:'60px'}}/></Link>
-                 <Link to="https://www.instagram.com/" style={{color:'#0afdd7'}}target={"_blank"} rel=' noopener noreferrer'><InstagramIcon style={{fontSize:'60px'}}/></Link>
-                 <Link to="https://wa.link/vok4hw" style={{color:'#0afdd7'}} target={"_blank"}rel=' noopener noreferrer'><WhatsAppIcon style={{fontSize:'60px'}}/></Link>
-            </Item>
+                 <Grid style={{fontSize:'60px'}}><BotonRedesSociales></BotonRedesSociales></Grid>
+                 </Item>
                 <Item2>           
-                <Grid ml='450px' mt='40px'>
+                <Grid ml='500px' mt='40px'>
                 <BotonPage></BotonPage>
                 <BotonContactame></BotonContactame>
                 </Grid>

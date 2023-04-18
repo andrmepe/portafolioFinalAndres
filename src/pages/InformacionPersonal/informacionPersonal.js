@@ -14,6 +14,7 @@ import Botones from '../../components/botones/Botones';
 import BotonContactame from '../../components/botonContactame/BotonContactame.js';
 import BotonPage from '../../components/botonPage/BotonPage';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import BotonRedesSociales from '../../components/botonRedesSociales/BotonRedesSociales';
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -35,7 +36,7 @@ const InformacionPersonal = () => {
             <img fontSize={'50px'} src={Profile} alt='Profile' style={{background:'#ffffff', width:'350px', 
         heigh:'150px', position:'fixed', marginLeft:'880px', marginTop:'110px' ,borderRadius:'30px'}}/>
             <Item>
-          <Grid ml={'100px'}><Botones></Botones></Grid>
+          <Grid ml='100px'><Botones></Botones></Grid>
             <Typography ml={'545px'} mt={'20px'} fontSize={'25px'} color={'#0afdd7'} variant="h3" gutterBottom>Hi</Typography>
             <Typography ml={'545px'} mt={'20px'} fontSize={'25px'} color={'#ff0080'} variant="h3" gutterBottom>I am a Developer</Typography>
             <Typography ml={'545px'} fontSize={'25px'} color={'white '} variant="h3" gutterBottom>____________________________</Typography>
@@ -47,11 +48,7 @@ const InformacionPersonal = () => {
                     <Grid item xs={8}>  <Item>E-mail: anmepe.sud@gmail.com</Item>  </Grid>
                     <Grid item xs={8}>
                     <Typography>Redes sociales:</Typography>
-                    <Link to="https://www.facebook.com/" style={{color:'#0afdd7'}} target={"_blank"} rel=' noopener noreferrer'><FacebookIcon /></Link>
-                    <Link to="https://www.linkedin.com/feed/" style={{color:'#0afdd7'}} target={"_blank"}rel=' noopener noreferrer'><LinkedInIcon/></Link>
-                    <Link to="https://www.instagram.com/" style={{color:'#0afdd7'}} target={"_blank"}rel=' noopener noreferrer'><InstagramIcon /></Link>
-                    <Link to="https://wa.link/vok4hw" style={{color:'#0afdd7'}} target={"_blank"}rel=' noopener noreferrer'><WhatsAppIcon /></Link>
-
+                    <BotonRedesSociales></BotonRedesSociales>
                     </Grid>
                 </Grid>
                 </Box>        

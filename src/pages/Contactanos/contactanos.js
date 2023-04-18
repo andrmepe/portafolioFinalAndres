@@ -4,19 +4,14 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import { Link } from "react-router-dom";
 import React, { useState } from 'react';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import TextField from '@mui/material/TextField';
 import Contact from '../assets/Contact.png'
 import axios from 'axios';
 import { Alert } from '@mui/material';
 import Botones from '../../components/botones/Botones';
 import BotonPage from '../../components/botonPage/BotonPage';
-
+import BotonRedesSociales from '../../components/botonRedesSociales/BotonRedesSociales';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? 'black' : 'black',
@@ -28,10 +23,11 @@ const Item = styled(Paper)(({ theme }) => ({
   
 }));
 
-const Contactanos = ({name, setName, lastName, setLastName, phone, setPhone,email, setEmail,message, setMessage}) => {
+const Contactanos = ({name, setName, lastName, setLastName, phone, setPhone,email, setEmail,message, setMessage, 
+    handleEmail, handleLastName, handleMessage, handleName, handlePhone}) => {
     const [showAlertSucces, setShowAlertSucces] = useState(false)
     const [showAlertFiels, setShowAlertFiels] = useState(false)
-   
+    const [showForm, setShowForm] = useState(true)
 
   /*   const clearFiels =()=>{
         setName('')
@@ -44,30 +40,17 @@ const Contactanos = ({name, setName, lastName, setLastName, phone, setPhone,emai
     const timeShowAlertSucces = ()=>{
         setTimeout(()=>{
             setShowAlertSucces(false)
-        }, 2000)
+            setShowForm(true)
+        }, 1000)
     }
     
     const timeShowAlertFiels = ()=>{
         setTimeout(()=>{
             setShowAlertFiels(false)
-        }, 2000)
+        }, 1000)
     }
 
-    const handleName = (e)=>{
-        setName(e.target.value)
-    }
-    const handleLastName = (e)=>{
-        setLastName(e.target.value)
-    }
-    const handlePhone = (e)=>{
-        setPhone(e.target.value)
-    }
-    const handleEmail = (e)=>{
-        setEmail(e.target.value)
-    }
-    const handleMessage = (e)=>{
-        setMessage(e.target.value)
-    }
+   
     /* console.log(name, lastName, phone, email, message) */
     const handleSubmit =(e)=>{
         e.preventDefault()
@@ -79,7 +62,7 @@ const Contactanos = ({name, setName, lastName, setLastName, phone, setPhone,emai
             console.log('entro else')
             axios.post('http://localhost:3001/contactanos/createRequest', {
                 name: name,
-                lastname: lastName,
+                lastName: lastName,
                 phone: phone,
                 email: email,
                 message: message
@@ -90,7 +73,9 @@ const Contactanos = ({name, setName, lastName, setLastName, phone, setPhone,emai
                 setEmail('')
                 setMessage('')
                 setShowAlertSucces(true)
+                setShowForm(false)
                 timeShowAlertSucces()
+
                 /* clearFiels() */
             })
         }
@@ -111,7 +96,8 @@ const Contactanos = ({name, setName, lastName, setLastName, phone, setPhone,emai
                 showAlertFiels && <Alert severity="error">you must complete all the fiels</Alert>
             }
             <Grid  container spacing={2}>
-            <Grid item xs={6}>
+            {   showForm &&
+                <Grid item xs={6}>
             <form onSubmit={handleSubmit}
                 style={{backgroundColor:'white', marginLeft:'175px', width:'200px'}}
                 noValidate
@@ -119,7 +105,7 @@ const Contactanos = ({name, setName, lastName, setLastName, phone, setPhone,emai
                 >
                 
                 <TextField id="name" label="name" onChange={handleName} variant="filled" />
-                <TextField id="lastName" label="lastname" onChange={handleLastName} variant="filled" />
+                <TextField id="lastName" label="lastName" onChange={handleLastName} variant="filled" />
                 <TextField id="phone" label="phone number" onChange={handlePhone} variant="filled" />
                 <TextField id="Email" label="E-mail" onChange={handleEmail} variant="filled" />
                 <TextField id="message" label="Message" onChange={handleMessage} 
@@ -131,6 +117,7 @@ const Contactanos = ({name, setName, lastName, setLastName, phone, setPhone,emai
                 <Button type='submit' onClick={(e)=>{handleSubmit(e)}} value={'Send'}> Send</Button>
             </form>
             </Grid>
+            }
             <Grid item xs={6}>
             <Box sx={{ flexGrow: 1 }}>
                 <Grid  marginLeft={'10px'} container spacing={2}>
@@ -140,11 +127,7 @@ const Contactanos = ({name, setName, lastName, setLastName, phone, setPhone,emai
                     <Grid item xs={8}>
                     
                  <Typography>Redes sociales:</Typography>
-                    
-                 <Link to="https://www.facebook.com/andres.m.perez.581" style={{color:'#0afdd7'}} target={"_blank"}><FacebookIcon /></Link>
-                 <Link to="https://www.linkedin.com/in/andres-mejia-374483240/" style={{color:'#0afdd7'}} target={"_blank"}><LinkedInIcon /></Link>
-                 <Link to="https://www.instagram.com/" style={{color:'#0afdd7'}} target={"_blank"}><InstagramIcon /></Link>
-                 <Link to="https://wa.link/vok4hw" style={{color:'#0afdd7'}} target={"_blank"}rel=' noopener noreferrer'><WhatsAppIcon /></Link>   
+                    <BotonRedesSociales></BotonRedesSociales>
                     </Grid>
                 </Grid>
             <Item>             

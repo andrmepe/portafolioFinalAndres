@@ -11,8 +11,20 @@ import axios from "axios";
 import { Button } from "@mui/material";
 
 
-const SolicitudesRecibidas = ({id, setId, name,setName, lastname, setLastName, phone, setPhone, email, setEmail, 
-  message, setMessage}) => {
+const SolicitudesRecibidas = ({
+  id, 
+  setId, 
+  name, 
+  setName, 
+  lastName, 
+  setLastName, 
+  phone, 
+  setPhone, 
+  email, 
+  setEmail, 
+  message, 
+  setMessage}) => {
+    console.log(name, lastName, phone, email, message)
     const [data, setData] = useState([])
     const Url = 'http://localhost:3001/contactanos'
     const getData = async ()=>{
@@ -30,18 +42,13 @@ const SolicitudesRecibidas = ({id, setId, name,setName, lastname, setLastName, p
     console.log(data)
 
     const edit =((obj)=>{
-      setId(obj.id)
       setName(obj.name)
-      setName(obj.lastName)
-      setName(obj.phone)
-      setName(obj.email)
-      setName(obj.message)
+    console.log('entro a edit')
     })
-
     const update =()=>{
       axios.put(`http://localhost:3001/contactanos/editRequest/${id}`)
     }
-    console.log(name, lastname, phone, email, message)
+    console.log(name, lastName, phone, email, message)
     return(
     <Grid container justifyContent='center' width='100%' style={{ background: 'white'}}>
         <Grid item ml='20px'>
@@ -64,13 +71,13 @@ const SolicitudesRecibidas = ({id, setId, name,setName, lastname, setLastName, p
         <TableBody>
           {
             data.map((row)=>(
-               <TableRow key={row.id} onClick={()=>{edit()}} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}> 
+               <TableRow key={row.idcontactame} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}> 
                 <TableCell >{row.name}</TableCell>
-                <TableCell >{row.lastname}</TableCell>
+                <TableCell >{row.lastName}</TableCell>
                 <TableCell >{row.phone}</TableCell>
                 <TableCell >{row.email}</TableCell>
                 <TableCell >{row.message}</TableCell>
-                <TableCell ><Button>Edit</Button></TableCell>
+                <TableCell ><Button  onClick={()=>{edit(row)}}>Edit</Button></TableCell>
                 <TableCell ><Button>Delete</Button></TableCell>
                </TableRow> 
             ))
