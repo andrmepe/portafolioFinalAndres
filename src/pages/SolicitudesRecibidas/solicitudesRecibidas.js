@@ -42,7 +42,8 @@ const SolicitudesRecibidas = ({
     console.log(data)
 
     const edit =((obj)=>{
-      setName(obj.name)
+  /*     setId(obj.idcontactame) */
+      
     console.log('entro a edit')
     })
     const update =()=>{

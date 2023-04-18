@@ -1,5 +1,3 @@
-import { styled } from '@mui/material/styles';
-import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -12,16 +10,6 @@ import { Alert } from '@mui/material';
 import Botones from '../../components/botones/Botones';
 import BotonPage from '../../components/botonPage/BotonPage';
 import BotonRedesSociales from '../../components/botonRedesSociales/BotonRedesSociales';
-
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? 'black' : 'black',
-  color: 'white',
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: 'left',
-  fontSize:'16px',
-  
-}));
 
 const Contactanos = ({name, setName, lastName, setLastName, phone, setPhone,email, setEmail,message, setMessage, 
     handleEmail, handleLastName, handleMessage, handleName, handlePhone}) => {
@@ -49,8 +37,7 @@ const Contactanos = ({name, setName, lastName, setLastName, phone, setPhone,emai
             setShowAlertFiels(false)
         }, 1000)
     }
-
-   
+    
     /* console.log(name, lastName, phone, email, message) */
     const handleSubmit =(e)=>{
         e.preventDefault()
@@ -82,11 +69,10 @@ const Contactanos = ({name, setName, lastName, setLastName, phone, setPhone,emai
     }
     console.log(name, lastName, phone, email, message)
     return (
-        <Grid  container width='100%' spacing={2}>
+        <Grid  container width='100%' spacing={2} style={{background:'black'}}>
             <Grid item xs={12}>
             <img  src={Contact} alt='Contact' style={{background:'#ffffff', borderRadius:'30px', width:'200px', 
         heigh:'100px', position:'fixed', marginLeft:'430px', marginTop:'200px', opacity: .4}}/>
-            <Item>
             <Grid ml='70px' mb='20px' mt='20px'><Botones></Botones></Grid>
             <Typography marginLeft={'175px'} fontSize={'20px'} color={'#ff0080'} variant="h3" gutterBottom>Please fill out the quick form and we will be in touch soon</Typography>       
             {
@@ -120,25 +106,21 @@ const Contactanos = ({name, setName, lastName, setLastName, phone, setPhone,emai
             }
             <Grid item xs={6}>
             <Box sx={{ flexGrow: 1 }}>
-                <Grid  marginLeft={'10px'} container spacing={2}>
-                    <Grid  item xs={8}> <Item  >Name: Andres Mejia</Item>  </Grid>
-                    <Grid item xs={8}>  <Item>Phone: 0451049712</Item>     </Grid>
-                    <Grid item xs={8}>  <Item>E-mail: anmepe.sud@gmail.com</Item>  </Grid>
-                    <Grid item xs={8}>
-                    
-                 <Typography>Redes sociales:</Typography>
+                <Grid  ml='10px'  container spacing={2} style={{fontSize:'20px',color:'white'}}>
+                    <Grid  item xs={8}> Name: Andres Mejia</Grid>
+                    <Grid item xs={8}> Phone: 0451049712 </Grid>
+                    <Grid item xs={8}> E-mail: anmepe.sud@gmail.com</Grid>
+                    <Grid item xs={8}>Redes sociales:
                     <BotonRedesSociales></BotonRedesSociales>
                     </Grid>
-                </Grid>
-            <Item>             
-               <Grid ml='20px' mt='10px'><BotonPage></BotonPage></Grid>
-             </Item>
+                </Grid>           
+               <Grid ml='25px' mt='30px'><BotonPage></BotonPage></Grid>
                 </Box>
                 </Grid>
                 </Grid>      
-            </Item>
             </Grid>
       </Grid>
+      
     )
 }
 

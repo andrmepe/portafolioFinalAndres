@@ -6,7 +6,6 @@ import { useNavigate, Link} from "react-router-dom";
 import Alert from '@mui/material/Alert';
 import Registarse from "../registarse/Registrarse.js";
 import Typography from "@mui/material/Typography";
-import BotonPage from "../../components/botonPage/BotonPage.js";
 
 const Login = ({setIsAllowed})=>{
     const [user, setUser] = useState('');
