@@ -15,7 +15,7 @@ const PaginaPrincipal = () => {
                 textDecoration:'none', padding:'5px',borderRadius:'5px',border: '1px solid #0afdd7',color: "white"}}>
                 Login
                 </Link>
-        <img  src={Programmer2} alt="programmer2" style={{background:'#ffffff', borderRadius:'30px', width:'200px', 
+        <img  src={Programmer2} alt="programmer2" style={{background:'#ffffff', borderRadius:'30px', border:'0px' ,width:'200px', 
         heigh:'100px', position:'fixed', marginLeft:'620px', marginTop:'90px'}}/>
             
                 <Typography  variant="h3" color={"white"} mt={2} marginLeft={5} gutterBottom style={{ background: 'black' }}>
