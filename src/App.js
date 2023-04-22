@@ -50,7 +50,7 @@ const handleMessage = (e)=>{
         <Route path="/solicitudesRecibidas" element = {<SolicitudesRecibidas/>}></Route>
                 
       </Route>
-
+      <Route path='/portafolioFinalAndres' element={<Navigate to={'/PaginaPrincipal'}/>}></Route>
         <Route path="/login" element = {<Login setIsAllowed={setIsAllowed}/>}></Route>
         <Route path="/contactanos" element = {<Contactanos name={name} setName={setLastName} lastName={lastName} 
         setLastName={setLastName} phone={phone} setPhone={setPhone} email={email} setEmail={setEmail} message={message} 
