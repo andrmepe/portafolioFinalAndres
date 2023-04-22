@@ -5,7 +5,7 @@
     {
       "request": "launch",
       "name": "Launch Chrome against localhost",
-      "homepage": "https://gitname.github.io/react-FinalProject-Fron-Andres",
+      "homepage": "https://gitname.github.io/portafolioFinalAndres",
       "type": "dart"
     }
   ],
